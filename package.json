@@ -31,14 +31,14 @@
     "test"
   ],
   "license": "Apache-2.0",
-  "main": "source/index",
+  "main": "literate-assertions.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kemitchell/literate-assertions.git"
   },
   "scripts": {
     "check": "check-versions --check-module",
-    "lint": "jshint bin source && jscs bin source",
+    "lint": "jshint bin literate-assertions.js && jscs bin literate-assertions.js",
     "pre-commit": "npm run check && npm run lint && npm run test",
     "test": "mocha",
     "travis-ci": "npm run pre-commit"
