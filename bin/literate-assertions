@@ -8,4 +8,3 @@ var concat = require('concat-stream');
 process.stdin.pipe(concat(function(buffered) {
   process.stdout.write(require(moduleRoot)(buffered.toString()));
 }));
-process.stdin.resume();
