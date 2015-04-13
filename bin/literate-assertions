@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var fs = require('fs');
+var moduleRoot = path.join(path.dirname(fs.realpathSync(__filename)), '..');
+var concat = require('concat-stream');
+
+process.stdin.pipe(concat(function(buffered) {
+  process.stdout.write(require(moduleRoot)(buffered.toString()));
+}));
+process.stdin.resume();

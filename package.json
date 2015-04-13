@@ -1,0 +1,46 @@
+{
+  "name": "literate-assertions",
+  "description": "translate Markdown code examples into assertions",
+  "version": "0.1.0",
+  "author": {
+    "name": "Kyle E. Mitchell",
+    "email": "kyle@kemitchell.com",
+    "url": "http://kemitchell.com/"
+  },
+  "bin": {
+    "literate-assertions": "./bin/literate-assertions"
+  },
+  "bugs": "https://github.com/kemitchell/literate-assertions/issues",
+  "dependencies": {
+    "concat-stream": "^1.4.8",
+    "markdown-it": "^4.1.0"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "check-versions": "^1.0.0",
+    "jscs": "^1.12.0",
+    "jshint": "^2.7.0",
+    "mocha": "^2.2.4"
+  },
+  "homepage": "https://github.com/kemitchell/literate-assertions",
+  "keywords": [
+    "assert",
+    "documentation",
+    "literate",
+    "markdown",
+    "test"
+  ],
+  "license": "Apache-2.0",
+  "main": "source/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kemitchell/literate-assertions.git"
+  },
+  "scripts": {
+    "check": "check-versions --check-module",
+    "lint": "jshint bin source && jscs bin source",
+    "pre-commit": "npm run check && npm run lint && npm run test",
+    "test": "mocha",
+    "travis-ci": "npm run pre-commit"
+  }
+}
