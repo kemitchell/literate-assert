@@ -63,7 +63,7 @@ You might use it in `package.json` for lightweight testing:
     "literate-assertions": "*"
   },
   "scripts": {
-    "test": "README.md < literate-assertions | sed 's!your-module-name!./!g | node"
+    "test": "README.md < literate-assertions | sed 's!your-module-name!./!g' | node"
   }
 }
 ```
