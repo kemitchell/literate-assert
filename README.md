@@ -2,7 +2,7 @@ literate-assertions
 ===================
 
 [![NPM version](https://img.shields.io/npm/v/literate-assertions.svg)](https://www.npmjs.com/package/literate-assertions)
-[![build status](https://img.shields.io/travis/kemitchell/literate-assertions.js.svg)](http://travis-ci.org/kemitchell/literate-assertions.js)
+[![build status](https://img.shields.io/travis/kemitchell/literate-assertions.svg)](http://travis-ci.org/kemitchell/literate-assertions)
 
 Translate Markdown code examples into assertions.
 
