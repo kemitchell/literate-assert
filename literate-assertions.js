@@ -44,21 +44,14 @@ module.exports = (function() {
     ]
   ];
 
-  var preamble = 'var assert = require(\'assert\');\n';
-
   return function(markdownString) {
-    return (
-      preamble +
-      replacements.reduce(function(code, replacement) {
-        return String.prototype.replace.apply(code, replacement);
-      }, (
-        markdown
-          .parse(markdownString + '\n')
-          .reduce(function(code, token) {
-            return isCodeToken(token) ? code + token.content : code;
-          }, '')
-      ))
-    );
+    var code = markdown.parse(markdownString + '\n')
+      .reduce(function(code, token) {
+        return isCodeToken(token) ? code + token.content : code;
+      }, '');
+    return replacements.reduce(function(code, replacement) {
+      return String.prototype.replace.apply(code, replacement);
+    }, code);
   };
 })();
 
